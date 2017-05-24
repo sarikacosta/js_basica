@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<script>
+	function trocarLetra(caracter)
+	{
+		switch(caracter)
+		{
+			case"p": return "t";
+			case"o": return "e";
+			case"l": return "n";
+			case"a": return "i";
+			case"r": return "s";
+			case"t": return "p";
+			case"e": return "o";
+			case"n": return "l";
+			case"i": return "a";
+			case"s": return "r";
+			default: return caracter;		
+		}
+	}
+	function criptografar()
+	{
+		var frase=document.getElementById("frase").value;
+		frase=frase.toUperCase()
+		var fraseCriptografada="";
+		for(var=i; i<frase.length; i++)
+		{
+			var letra=frase.charAt(i);
+			var letraCripto=trocarLetra(letra);
+			fraseCriptografada+=letraCripto;
+		}
+		document.getElementoById("msg").innerHTML=fraseCriptografada;
+	}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="frase"/>
+		<input type="button" onclick="criptografar()" value="Criptrografar"/>
+	</form>
+	<h1 id="msg"></h1>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<script>
+		a=0;
+		function teste()
+		{
+			var numero = document.getElementById("numero").value;
+			for(i=2; i<numeroPrimo; i++)
+			{
+				if(numero%i==0)
+				{
+					a++;
+				}
+			}
+			if(a==0)
+			{
+				document.write ("O número é primo!")
+			}
+			else
+			{
+				document.write ("O número não é primo!")
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<label for="numero"> Número: </label>
+		<input type="number" name="numero"/>
+		<input type="button" onclick="numero" value="verificar"/>
+	</form>
+</body>
+</html>

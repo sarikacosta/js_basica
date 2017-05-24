@@ -23,22 +23,22 @@
 	function criptografar()
 	{
 		var frase=document.getElementById("frase").value;
-		frase=frase.toUperCase()
+		frase=frase.toLowerCase();
 		var fraseCriptografada="";
-		for(var=i; i<frase.length; i++)
+		for(var i=0; i<frase.length; i++)
 		{
 			var letra=frase.charAt(i);
 			var letraCripto=trocarLetra(letra);
 			fraseCriptografada+=letraCripto;
 		}
-		document.getElementoById("msg").innerHTML=fraseCriptografada;
+		document.getElementById("msg").innerHTML=fraseCriptografada;
 	}
 	</script>
 </head>
 <body>
 	<form>
 		<input type="text" id="frase"/>
-		<input type="button" onclick="criptografar()" value="Criptrografar"/>
+		<input type="button" onclick="criptografar()" value="criptrografar"/>
 	</form>
 	<h1 id="msg"></h1>
 </body>

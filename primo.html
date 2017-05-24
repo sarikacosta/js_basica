@@ -7,7 +7,7 @@
 		function teste()
 		{
 			var numero = document.getElementById("numero").value;
-			for(i=2; i<numeroPrimo; i++)
+			for(i=2; i<numero; i++)
 			{
 				if(numero%i==0)
 				{
@@ -28,8 +28,8 @@
 <body>
 	<form>
 		<label for="numero"> Número: </label>
-		<input type="number" name="numero"/>
-		<input type="button" onclick="numero" value="verificar"/>
+		<input type="number" id="numero"/>
+		<input type="button" onclick="teste()" value="verificar"/>
 	</form>
 </body>
 </html>
